@@ -17,7 +17,8 @@
 function count_survey_responses(data) {
 //check if there's any data at all
   if(data.length === 0) return null;
-
+  
+//loop through each question and count the answers
   return data.reduce((acc, curr) => {
     curr.questions.forEach((obj) => {
       const countsForAnswers = {};
